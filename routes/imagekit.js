@@ -9,7 +9,7 @@ const imagekit = new ImageKit({
 });
 
 router.get("/auth", (req, res) => {
-  const auth = imagekit.getAuthentificationParameters();
+  const auth = imagekit.getAuthenticationParameters();
   res.json(auth);
 });
 
