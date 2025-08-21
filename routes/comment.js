@@ -95,7 +95,7 @@ router.post('/comment/:commentId/like', async (req, res) => {
     if (!userId) {
       return res.status(400).json({ error: 'User ID is required' });
     }
-    
+  
     // Check if user already liked the comment
     const { data: existingLike, error: likeError } = await supabase
       .from('comment_likes')
